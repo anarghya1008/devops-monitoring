@@ -29,7 +29,7 @@ pipeline {
 
         stage('Docker Build') {
             steps {
-                bat 'docker build -t devops-monitoring:1.0 .'
+               bat '"C:\\Users\\AVICHAL JAIN\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe" build -t devops-monitoring:1.0 .'
             }
         }
 
