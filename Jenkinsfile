@@ -1,3 +1,4 @@
+
 pipeline {
     agent any
 
@@ -23,6 +24,12 @@ pipeline {
         stage('Code Validation') {
             steps {
                 bat '.venv\\Scripts\\python.exe -m compileall app.py'
+            }
+        }
+
+        stage('Docker Build') {
+            steps {
+                bat 'docker build -t devops-monitoring:1.0 .'
             }
         }
 
